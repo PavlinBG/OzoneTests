@@ -85,6 +85,78 @@ namespace WebTests.Pages
 
 
 
+
+
+
+
+        //Categoris 
+
+        public IWebElement Gameing => driver.FindElement(By.LinkText("Гейминг"));
+
+ 
+        public IWebElement BookStore => driver.FindElement(By.LinkText("Книжарница"));
+
+ 
+        public IWebElement MusicAndMovies => driver.FindElement(By.LinkText("Музика и филми"));
+
+        public IWebElement Merchandise => driver.FindElement(By.LinkText("Мърчандайз"));
+        public IWebElement LaptopsPCsMonitors => driver.FindElement(By.LinkText("Лаптопи, РС и монитори"));
+
+        public IWebElement AudioAndHiFiSystems => driver.FindElement(By.LinkText("Аудио и Hi-Fi"));
+
+        public IWebElement SmartPhonesAndTablets => driver.FindElement(By.LinkText("Смартфони и таблети"));
+
+        public IWebElement TVPhotoVideo => driver.FindElement(By.LinkText("ТВ, Фото и видео"));
+
+        public IWebElement SmallElecticalAppliances => driver.FindElement(By.LinkText("Малки електроуреди"));
+
+        public IWebElement Toys => driver.FindElement(By.LinkText("Играчки"));
+
+        public IWebElement ProducstsForBabyAndMother => driver.FindElement(By.LinkText("Майка и бебе"));
+
+        public IWebElement GamesAndPuzzeles => driver.FindElement(By.LinkText("Пъзели и игри"));
+
+        public IWebElement HealthAndBeauty => driver.FindElement(By.LinkText("Здраве и красота"));
+
+        public IWebElement SportAndOutdoor => driver.FindElement(By.LinkText("Спорт и аутдор"));
+
+        public IWebElement ForTheHome => driver.FindElement(By.LinkText("За дома"));
+
+        public IWebElement ForTheOffice => driver.FindElement(By.LinkText("За офиса"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public void Open()
         {
             driver.Navigate().GoToUrl(this.PageUrl);

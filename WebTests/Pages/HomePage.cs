@@ -15,6 +15,8 @@ namespace WebTests.Pages
 
         public override string PageUrl => "https://www.ozone.bg/homepage.php/";
 
+
+        //Nav bar
  
         public string CategoriesPageUrl => "https://www.ozone.bg/categories.php";
         public string LastAddedPageUrl => "https://www.ozone.bg/posledno-dobaveni/";
