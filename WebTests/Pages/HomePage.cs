@@ -16,8 +16,19 @@ namespace WebTests.Pages
         public override string PageUrl => "https://www.ozone.bg/homepage.php/";
 
 
+
+        public void SearchProduct(string productName)
+        {
+            IWebElement searchInput = driver.FindElement(By.Id("search-input")); // Replace with the actual ID of the search input field
+            IWebElement searchButton = driver.FindElement(By.Id("search-button")); // Replace with the actual ID of the search button
+
+            searchInput.Clear();
+            searchInput.SendKeys(productName);
+            searchButton.Click();
+        }
+
         //Nav bar
- 
+
         public string CategoriesPageUrl => "https://www.ozone.bg/categories.php";
         public string LastAddedPageUrl => "https://www.ozone.bg/posledno-dobaveni/";
 

@@ -72,7 +72,7 @@ namespace WebTests.Pages
 
         public string SportAndOutdoorPageUrl => "https://www.ozone.bg/sport-i-autdor/";
 
-        public string ForTheHomePageUrl => "https://www.ozone.bg/dom-i-gradina/";
+        public string ForTheHomePageUrl => "https://www.ozone.bg/za-ofisa/";
 
         public string ForTheOfficePageUrl => "https://www.ozone.bg/za-ofisa/";
 

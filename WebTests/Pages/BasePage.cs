@@ -19,6 +19,22 @@ namespace WebTests.Pages
             this.driver = driver; 
         }
 
+
+        public void Open()
+        {
+            driver.Navigate().GoToUrl(this.PageUrl);
+        }
+
+        public bool isOpen()
+        {
+            return driver.Url == this.PageUrl;
+        }
+
+        public String GetPageUrl()
+        {
+            return driver.Title;
+        }
+
         //Header
         public IWebElement HomeLink => driver.FindElement(By.CssSelector("body > header > div.wide-area.header-logo-cart > div > div.logo-wrapper > a"));
 
@@ -34,9 +50,11 @@ namespace WebTests.Pages
 
         public IWebElement OurStore => driver.FindElement(By.LinkText("Нашите магазини"));
 
+        //Search Bar
 
+        public IWebElement SearchBar => driver.FindElement(By.CssSelector("#search"));
 
-
+        //public IWebElement SearchBarDropDown => driver.FindElement(By.Id("ui-id-1"));
 
 
         //Footer
@@ -156,21 +174,7 @@ namespace WebTests.Pages
 
 
 
-
-        public void Open()
-        {
-            driver.Navigate().GoToUrl(this.PageUrl);
-        }
-
-        public bool isOpen()
-        {
-            return driver.Url == this.PageUrl;
-        }
-
-        public String GetPageUrl()
-        {
-            return driver.Title;
-        }
+         
 
     }
 }

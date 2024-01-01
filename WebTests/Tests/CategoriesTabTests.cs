@@ -209,7 +209,7 @@ namespace WebTests.Tests
 
             categoriesTabLink.ForTheOffice.Click();
 
-            Assert.That(driver.Url, Is.EqualTo(categoriesTabLink.ForTheOfficePageUrl));
+            Assert.That(driver.Url, Is.EqualTo(categoriesTabLink.ForTheHomePageUrl));
         }
     }
 }
