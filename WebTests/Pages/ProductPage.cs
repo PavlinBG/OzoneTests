@@ -19,12 +19,18 @@ namespace WebTests.Pages
 
         public void SelectProduct(Products product)
         {
-            // Code to select the specified product on the product page
+            IWebElement productElement = driver.FindElement(By.XPath($"//div[@class='product' and contains(text(), '{product.ToString()}')]"));
+
+            productElement.Click();
+
         }
 
         public void AddToCart()
         {
-            // Code to add the selected product to the cart
+            IWebElement addToCartButton = driver.FindElement(By.XPath("//button[contains(text(), 'Add to Cart')]"));
+
+            addToCartButton.Click();
+
         }
     }
 }

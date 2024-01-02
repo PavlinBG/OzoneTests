@@ -16,27 +16,48 @@ namespace WebTests.Pages
 
         }
 
-         
+
 
         public void NavigateToCart()
         {
-            // Code to navigate to the shopping cart page
+            IWebElement navigateToCart = driver.FindElement(By.XPath($"//div[@class='product' and contains(text(), '{product.ToString()}')]"));
+            navigateToCart.Click();
+
+            // Get the product ID
+            IWebElement productIdElement = driver.FindElement(By.XPath("//div[@class='product-id']"));
+            string productId = productIdElement.Text;
+            Console.WriteLine("Product ID: " + productId);
         }
 
         public void RemoveProduct(Products product)
         {
-            // Code to remove the specified product from the cart
+            IWebElement removeProduct = driver.FindElement(By.CssSelector("#delete_item"));
+
+           removeProduct.Click();
         }
 
         public void UpdateProductQuantity(Products product, int quantity)
         {
-            // Code to update the quantity of the specified product in the cart
+            IWebElement updateProductQuantity = driver.FindElement(By.XPath("#shopping-cart-table > div.cart-row.item > div.cell.col3 > div > span.ui-spinner.ui-corner-all.ui-widget.ui-widget-content > a.ui-spinner-button.ui-spinner-up.ui-corner-tr"));
+
+            updateProductQuantity.Click();
+
+            //Note to Updateing the Quantity of the products reloads the page
+            //Add Implicit Wait 
+            Thread.Sleep(2000);
+
+
         }
 
         public void ProceedToCheckout()
         {
-            // Code to proceed to the checkout process from the shopping cart page
-        }
+
+            //Note to Proceed to Cheackout you need to be log in 
+
+            IWebElement proceedToCheckout = driver.FindElement(By.LinkText("Към завършване"));
+
+            proceedToCheckout.Click();
+         }
 
     }
 }

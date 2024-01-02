@@ -19,8 +19,8 @@ namespace WebTests.Pages
 
         public void SearchProduct(string productName)
         {
-            IWebElement searchInput = driver.FindElement(By.Id("search-input")); // Replace with the actual ID of the search input field
-            IWebElement searchButton = driver.FindElement(By.Id("search-button")); // Replace with the actual ID of the search button
+            IWebElement searchInput = driver.FindElement(By.Id("search"));  
+            IWebElement searchButton = driver.FindElement(By.ClassName("#search_mini_form > button"));  
 
             searchInput.Clear();
             searchInput.SendKeys(productName);

@@ -10,7 +10,7 @@ namespace WebTests.Objects
     {
         public string Title { get; set; }
         public string Author { get; set; }
-         public decimal Price { get; set; }
+        public decimal Price { get; set; }
 
         // Add more properties as needed
 

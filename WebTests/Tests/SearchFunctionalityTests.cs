@@ -48,12 +48,13 @@ namespace WebTests.Tests
         public void Test_FooterTab_NavigatesToBlogPageUrl()
         {
 
-            Thread.Sleep(2000);
-            var searchFildBar  = new BasePage(driver).SearchBar;
+             var searchFildBar  = new BasePage(driver).SearchBar;
 
- 
+
+             
 
             searchFildBar.Click();
+            Thread.Sleep(2000);
 
             IWebElement SearchBarDropDown = driver.FindElement(By.Id("ui-id-1"));
 
