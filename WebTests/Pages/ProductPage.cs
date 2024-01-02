@@ -27,7 +27,7 @@ namespace WebTests.Pages
 
         public void AddToCart()
         {
-            IWebElement addToCartButton = driver.FindElement(By.XPath("//button[contains(text(), 'Add to Cart')]"));
+            IWebElement addToCartButton = driver.FindElement(By.LinkText("Купи"));
 
             addToCartButton.Click();
 

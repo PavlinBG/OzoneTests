@@ -20,8 +20,8 @@ namespace WebTests.Pages
 
         public void NavigateToCart()
         {
-            IWebElement navigateToCart = driver.FindElement(By.XPath($"//div[@class='product' and contains(text(), '{product.ToString()}')]"));
-            navigateToCart.Click();
+           // IWebElement navigateToCart = driver.FindElement(By.XPath($"//div[@class='product' and contains(text(), '{product.ToString()}')]"));
+           // navigateToCart.Click();
 
             // Get the product ID
             IWebElement productIdElement = driver.FindElement(By.XPath("//div[@class='product-id']"));

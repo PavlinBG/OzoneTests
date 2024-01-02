@@ -12,7 +12,7 @@ namespace MobileTests.Tests.Tests
         private readonly AndroidDriver<AndroidElement> driver;
 
 
-        public MobileTests(AndroidDriver<AndroidElement> driver<)
+        public MobileTests(AndroidDriver<AndroidElement> driver)
         {
             this.driver = driver;
         }
