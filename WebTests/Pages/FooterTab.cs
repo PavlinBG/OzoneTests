@@ -50,8 +50,5 @@ namespace WebTests.Pages
         public string TiktokPageUrl => "https://www.tiktok.com/@ozone.bg";
         public string YoutubePageUrl => "https://www.youtube.com/@izigraiskukata";
 
-
-
-
     }
 }

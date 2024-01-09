@@ -18,30 +18,6 @@ namespace WebTests.Pages
         public override string PageUrl => "https://www.ozone.bg/homepage.php/";
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         //add tabs 
 
         public string GameingPageUrl => "https://www.ozone.bg/gaming/";

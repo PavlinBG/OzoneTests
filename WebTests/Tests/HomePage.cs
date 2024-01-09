@@ -32,7 +32,7 @@ namespace WebTests.Tests
             home_page.Open();
             Assert.That(driver.Title, Is.EqualTo(home_page.GetPageUrl()));
         }
- 
+
 
 
         [Test]
@@ -57,9 +57,9 @@ namespace WebTests.Tests
         [Test]
         public void Test_Homepage_LogoDisplayed()
         {
-             IWebElement logoElement = driver.FindElement(By.XPath("/html/body/header/div[1]/div/div[1]/a/img"));
+            IWebElement logoElement = driver.FindElement(By.XPath("/html/body/header/div[1]/div/div[1]/a/img"));
 
-             Assert.That(logoElement.Displayed);
+            Assert.That(logoElement.Displayed);
         }
 
         [Test]
@@ -69,9 +69,6 @@ namespace WebTests.Tests
 
             Assert.That(searchBarElement.Displayed);
         }
-
-
-
 
         [Test]
         public void Test_HomePage_NavBarDisplayed()
@@ -100,21 +97,20 @@ namespace WebTests.Tests
 
             string navigatedUrl = driver.Url;
 
-            Assert.That(navigatedUrl, Is.EqualTo(homePage.PageUrl));
-
+            Assert.That(navigatedUrl, Is.EqualTo(homePage.PageUrl))
 
         }
 
-        */ 
+        */
 
         [Test]
         public void Test_HomePage_NavigatesToLastAddedPageUrl()
         {
             var homePage = new HomePage(driver);
 
-             homePage.LastAdded.Click();
+            homePage.LastAdded.Click();
 
-             Assert.That(driver.Url, Is.EqualTo(homePage.LastAddedPageUrl));  
+            Assert.That(driver.Url, Is.EqualTo(homePage.LastAddedPageUrl));
         }
 
         [Test]
@@ -137,16 +133,16 @@ namespace WebTests.Tests
             Assert.That(driver.Url, Is.EqualTo(homePage.UnpackedPageUrl));
         }
 
-      
+
 
         [Test]
         public void Test_HomePage_NavitesDiscontPageUrl()
         {
             var homePage = new HomePage(driver);
 
-             homePage.Discount.Click();
+            homePage.Discount.Click();
 
-             Assert.That(driver.Url, Is.EqualTo(homePage.DiscontPageUrl)); 
+            Assert.That(driver.Url, Is.EqualTo(homePage.DiscontPageUrl));
         }
 
 
@@ -159,13 +155,6 @@ namespace WebTests.Tests
 
             Assert.That(driver.Url, Is.EqualTo(homePage.OurStorePageUrl));
         }
-
-
-
-
-      
-
-
 
 
         [Test]
@@ -193,8 +182,6 @@ namespace WebTests.Tests
         }
 
 
-
-
         [Test]
         public void Test_HomePage_SocialMediaLink()
         {
@@ -209,17 +196,14 @@ namespace WebTests.Tests
         }
 
 
-
-
         [Test]
         public void Test_Homepage_ResponsiveDesign()
         {
-           
+
             Assert.That(driver.FindElement(By.TagName("body")).Displayed);
 
-             driver.Manage().Window.Maximize();
+            driver.Manage().Window.Maximize();
         }
-
 
 
     }

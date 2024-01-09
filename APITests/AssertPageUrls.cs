@@ -25,26 +25,20 @@ namespace APITests
         [Test]
         public void Test_NavigateToPoslednoDobaveni()
         {
-            // Prepare the request for the homepage
-            RestRequest homeRequest = new RestRequest("/", Method.Get);
+             RestRequest homeRequest = new RestRequest("/", Method.Get);
             var homeResponse = _client.Execute(homeRequest);
 
-            // Check status code for the homepage
-            Assert.AreEqual(HttpStatusCode.OK, homeResponse.StatusCode, "Expected HTTP 200 OK for homepage");
+             Assert.AreEqual(HttpStatusCode.OK, homeResponse.StatusCode, "Expected HTTP 200 OK for homepage");
 
-            // Check if the link text is present in the response content
-            string linkText = "Последно добавени";
+             string linkText = "Последно добавени";
             Assert.IsTrue(homeResponse.Content.Contains(linkText), $"Expected '{linkText}' link not found on the homepage");
 
-            // Extract the URL for the "Последно добавени" link
-            string linkUrl = ExtractLinkUrl(homeResponse.Content, linkText);
+             string linkUrl = ExtractLinkUrl(homeResponse.Content, linkText);
 
-            // Navigate to the "Последно добавени" link
-            RestRequest linkRequest = new RestRequest(linkUrl, Method.Get);
+             RestRequest linkRequest = new RestRequest(linkUrl, Method.Get);
             var linkResponse = _client.Execute(linkRequest);
 
-            // Check status code for the "Последно добавени" page
-            Assert.AreEqual(HttpStatusCode.OK, linkResponse.StatusCode, $"Expected HTTP 200 OK for '{linkText}' page");
+             Assert.AreEqual(HttpStatusCode.OK, linkResponse.StatusCode, $"Expected HTTP 200 OK for '{linkText}' page");
         }
 
         // Helper method to extract URL based on link text

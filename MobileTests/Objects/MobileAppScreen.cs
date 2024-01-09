@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MobileTests.Objects
 {
-    internal class MobileAppScreen
+    public class MobileAppScreen
     {
     }
 }

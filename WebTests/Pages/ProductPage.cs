@@ -17,6 +17,9 @@ namespace WebTests.Pages
 
         }
 
+        public override string PageUrl => "https://www.ozone.bg/homepage.php/";
+
+
         public void SelectProduct(Products product)
         {
             IWebElement productElement = driver.FindElement(By.XPath($"//div[@class='product' and contains(text(), '{product.ToString()}')]"));

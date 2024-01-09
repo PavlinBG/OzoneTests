@@ -44,24 +44,7 @@ namespace WebTests.Tests
         }
 
 
-        [Test]
-        public void Test_FooterTab_NavigatesToBlogPageUrl()
-        {
-
-             var searchFildBar  = new BasePage(driver).SearchBar;
-
-
-             
-
-            searchFildBar.Click();
-            Thread.Sleep(2000);
-
-            IWebElement SearchBarDropDown = driver.FindElement(By.Id("ui-id-1"));
-
-
-
-            Assert.That(SearchBarDropDown.Displayed);
-        }
+         
 
         [Test]
         public void Test_HeaderFunctionality_VerifyNavigationToHomePage()

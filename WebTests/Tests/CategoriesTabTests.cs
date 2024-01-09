@@ -20,7 +20,7 @@ namespace WebTests.Tests
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
 
-            var home_page = new HomePage(driver);
+            var home_page = new CategoriesTab(driver);
             home_page.Open();
             IWebElement saveCookieStettngs = driver.FindElement(By.LinkText("Запази настройките"));
 

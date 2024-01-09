@@ -42,8 +42,5 @@ namespace WebTests.Pages
         public string OurStorePageUrl => "https://www.ozone.bg/our-shops/";
 
 
-        
-
-  
     }
 }
